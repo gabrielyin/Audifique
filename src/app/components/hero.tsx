@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import AudioPlayer from "./audio-player";
 import Prompt from "./prompt";
 
@@ -17,9 +18,11 @@ export default function Hero() {
           </ul>
         </div>
 
-        <div className="mt-6">
-          <AudioPlayer />
-        </div>
+        <Suspense>
+          <div className="mt-6">
+            <AudioPlayer />
+          </div>
+        </Suspense>
       </section>
 
       <section>
